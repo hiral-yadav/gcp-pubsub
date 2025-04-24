@@ -3,6 +3,6 @@ RUN apt-get update \
     && apt-get install maven -y
 WORKDIR app
 COPY . /app
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 ENTRYPOINT ["java", "-jar"]
-CMD ["target/gcp-pubsub-0.0.1-SNAPSHOT.jar", "-DskipTests"]
+CMD ["target/gcp-pubsub-0.0.1-SNAPSHOT.jar"]
