@@ -5,4 +5,4 @@ WORKDIR app
 COPY . /app
 RUN mvn clean install
 ENTRYPOINT ["java", "-jar"]
-CMD ["target/gcp-pubsub-0.0.1-SNAPSHOT.jar"]
+CMD ["target/gcp-pubsub-0.0.1-SNAPSHOT.jar", "-DskipTests"]
